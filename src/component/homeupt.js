@@ -99,7 +99,7 @@ return (
                 <ul class="navbar-nav  mr-5">
                   <li class="nav-item mr-5">
                     <div class="nav-link">
-                    <Link to="/mainpage">
+                    <Link to="/login">
                         
                       <span>Login</span>
                       </Link>
