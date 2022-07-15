@@ -38,11 +38,9 @@ import {
 
 
 const LinkItems = [
-	{name: 'Home', icon: FiHome},
-	{name: 'Trending', icon: FiTrendingUp},
-	{name: 'Explore', icon: FiCompass},
-	{name: 'Favourites', icon: FiStar},
-	{name: 'Settings', icon: FiSettings},
+	{name: '90 Days Forecast', icon: FiHome, url: '/mainpage'},
+	{name: 'Indicator', icon: FiHome, url: '/indicator'},
+	// {name: 'Trading', icon: FiHome, url: '/trading'}
 ];
 
 export const MainLayout = ({ children }) => {
@@ -88,12 +86,12 @@ const SidebarContent = ({onClose, ...rest}) => {
 			{...rest}>
 			<Flex h="20" alignItems="center" mx="8" justifyContent="space-between">
 				<Text fontSize="2xl" fontFamily="monospace" fontWeight="bold">
-					Logo
+					5 Jamz
 				</Text>
 				<CloseButton display={{base: 'flex', md: 'none'}} onClick={onClose}/>
 			</Flex>
 			{LinkItems.map((link) => (
-				<NavItem key={link.name} icon={link.icon}>
+				<NavItem key={link.name} icon={link.icon} url={link.url}>
 					{link.name}
 				</NavItem>
 			))}
@@ -101,9 +99,9 @@ const SidebarContent = ({onClose, ...rest}) => {
 	);
 };
 
-const NavItem = ({icon, children, ...rest}) => {
+const NavItem = ({icon, children, url, ...rest}) => {
 	return (
-		<Link href="#" style={{textDecoration: 'none'}} _focus={{boxShadow: 'none'}}>
+		<Link href={url} style={{textDecoration: 'none'}} _focus={{boxShadow: 'none'}}>
 			<Flex
 				align="center"
 				p="4"
@@ -203,7 +201,7 @@ const MobileNav = ({onOpen, ...rest}) => {
 				</Flex>
 			</HStack>
 		</Flex><KommunicateChat /></>
-		
+
 	);
 };
 
