@@ -8,6 +8,9 @@ import homeupt from "./component/homeupt";
 import About from "./component/About";
 import ContactUs from "./component/Contact";
 import Dashboard from "./component/dashboard";
+import comingsoon from "./component/comingsoon";
+import login from "./component/login"
+import KommunicateChat from "./component/chat";
 
 import { MainLayout } from "./layout";
 import { CandleStickChart } from "./component/charts/candleStick";
@@ -45,6 +48,15 @@ function chatbot() {
     );
 }
 
+function lex()
+{
+  return(
+    <div>
+      <KommunicateChat/>
+    </div>
+  );
+}
+
 
 
 function App() {
@@ -53,17 +65,22 @@ return (
 
 	<Router>
 		<Switch>
+      
 		<Route exact path="/" component={homeupt} />
 		
 		<Route exact path="/about" component={About} />
 			
 		<Route exact path="/contactus" component={ContactUs} />
 
-    	<Route exact path="/mainpage" component={Dash} />
+    <Route exact path="/mainpage" component={Dash} />
 
 		<Route exact path="/trading" component={Tradingview} />
 
-		<Route exact path="/chatbot" component={chatbot} />
+		<Route exact path="/chatbot" component={lex} />
+
+    <Route exact path="/comingsoon" component={comingsoon} />
+
+    <Route exact path="/login" component={login} />
 			
 		<Redirect to="/" />
 
