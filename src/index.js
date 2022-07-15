@@ -4,6 +4,11 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ChakraProvider } from '@chakra-ui/react';
+import Kommunicate from '@kommunicate/kommunicate-chatbot-plugin';
+
+// // eslint-disable-next-line no-undef
+// Kommunicate.init("a73db6bd1397e514f9f60b92d1f5230" , {...optionalSettings})
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
