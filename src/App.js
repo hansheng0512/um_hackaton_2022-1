@@ -16,6 +16,7 @@ import {IndicatorPage} from "./pages/indicator";
 import {Forecast90Page} from "./pages/dashboard";
 import Dashboard from "./component/dashboard";
 import {LoginPage} from "./pages/login/login";
+import {LandingPage} from "./pages/landing";
 
 const Dash = () => {
 	return (
@@ -66,7 +67,7 @@ function App() {
 			<Router>
 				<Switch>
 
-					<Route exact path="/" component={homeupt}/>
+					<Route exact path="/" component={LandingPage}/>
 
 					<Route exact path="/about" component={About}/>
 
