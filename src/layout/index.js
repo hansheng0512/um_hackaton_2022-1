@@ -34,6 +34,7 @@ import {
 	FiBell,
 	FiChevronDown,
 } from 'react-icons/fi';
+import {useHistory} from "react-router-dom";
 
 
 
@@ -100,8 +101,11 @@ const SidebarContent = ({onClose, ...rest}) => {
 };
 
 const NavItem = ({icon, children, url, ...rest}) => {
+
+	const history = useHistory()
+
 	return (
-		<Link href={url} style={{textDecoration: 'none'}} _focus={{boxShadow: 'none'}}>
+		<Link onClick={() => history.push(url)} style={{textDecoration: 'none'}} _focus={{boxShadow: 'none'}}>
 			<Flex
 				align="center"
 				p="4"
