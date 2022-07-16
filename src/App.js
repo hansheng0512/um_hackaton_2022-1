@@ -15,6 +15,7 @@ import {CandleStickChart} from "./component/charts/candleStick";
 import {IndicatorPage} from "./pages/indicator";
 import {Forecast90Page} from "./pages/dashboard";
 import Dashboard from "./component/dashboard";
+import {LoginPage} from "./pages/login/login";
 
 const Dash = () => {
 	return (
@@ -81,7 +82,7 @@ function App() {
 
 					<Route exact path="/comingsoon" component={comingsoon}/>
 
-					<Route exact path="/login" component={login}/>
+					<Route exact path="/login" component={LoginPage}/>
 
 					<Redirect to="/"/>
 
