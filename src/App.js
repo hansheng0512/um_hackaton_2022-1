@@ -19,13 +19,13 @@ import {LoginPage} from "./pages/login/login";
 import {LandingPage} from "./pages/landing";
 import {SignupPage} from "./pages/signup/signup";
 
-const Dash = () => {
-	return (
-		<MainLayout>
-			<CandleStickChart/>
-		</MainLayout>
-	)
-}
+// const Dash = () => {
+// 	return (
+// 		<MainLayout>
+// 			<CandleStickChart data={data}/>
+// 		</MainLayout>
+// 	)
+// }
 
 const Tradingview = () => {
 	return (
