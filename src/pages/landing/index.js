@@ -21,7 +21,7 @@ import {
 	IoLogoBitcoin,
 	IoSearchSharp,
 } from 'react-icons/io5';
-import { FcAssistant, FcDonate, FcInTransit } from 'react-icons/fc';
+import { FcAssistant, FcDonate, FcEnteringHeavenAlive, FcInTransit } from 'react-icons/fc';
 import { CheckIcon } from '@chakra-ui/icons';
 
 import {
@@ -30,7 +30,7 @@ import {
 	Input,
 	IconButton
 } from '@chakra-ui/react';
-import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
+import { FaChessKing, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
 import { BiMailSend } from 'react-icons/bi';
 
 export const LandingPage = () => {
@@ -163,7 +163,7 @@ export const LandingPage = () => {
 						alignSelf={'center'}
 						position={'relative'}>
 						<Button
-							onClick={() => history.push('/login')}
+							onClick={() => history.push('/signup')}
 							colorScheme={'blue'}
 							bg={'blue.400'}
 							rounded={'full'}
@@ -171,10 +171,12 @@ export const LandingPage = () => {
 							_hover={{
 								bg: 'blue.500',
 							}}>
-							Get Started
+							Get Started !
 						</Button>
-						<Button variant={'link'} colorScheme={'blue'} size={'sm'}>
-							Learn more
+						<Button 
+							variant={'link'} colorScheme={'blue'} size={'sm'}
+							onClick={() => history.push('/login')}>
+							Sign In
 						</Button>
 						<Box>
 							<Icon
@@ -213,10 +215,9 @@ export const LandingPage = () => {
 							rounded={'md'}>
 							Our Story
 						</Text>
-						<Heading>Why our Product</Heading>
+						<Heading>Remixed Trading Refined Profit</Heading>
 						<Text color={'gray.500'} fontSize={'lg'}>
-							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-							nonumy eirmod tempor invidunt ut labore
+							Have you ever traded with such confident that your trades will flip into profit. Here you get assisted with the most sophisticated stock forecasting algorithm.
 						</Text>
 						<Stack
 							spacing={4}
@@ -227,22 +228,23 @@ export const LandingPage = () => {
 							}>
 							<Feature
 								icon={
-									<Icon as={IoAnalyticsSharp} color={'yellow.500'} w={5} h={5} />
+									<Icon as={IoSearchSharp} color={'yellow.500'} w={5} h={5} />
 								}
 								iconBg={useColorModeValue('yellow.100', 'yellow.900')}
-								text={'Business Planning'}
+								text={'Deposit'}
+
 							/>
 							<Feature
-								icon={<Icon as={IoLogoBitcoin} color={'green.500'} w={5} h={5} />}
+								icon={<Icon as={IoAnalyticsSharp} color={'green.500'} w={5} h={5} />}
 								iconBg={useColorModeValue('green.100', 'green.900')}
-								text={'Financial Planning'}
+								text={'Trade'}
 							/>
 							<Feature
 								icon={
-									<Icon as={IoSearchSharp} color={'purple.500'} w={5} h={5} />
+									<Icon as={IoLogoBitcoin} color={'purple.500'} w={5} h={5} />
 								}
 								iconBg={useColorModeValue('purple.100', 'purple.900')}
-								text={'Market Analysis'}
+								text={'Flip'}
 							/>
 						</Stack>
 					</Stack>
@@ -262,29 +264,11 @@ export const LandingPage = () => {
 
 			<Box p={4} style={{ marginTop: '10vh' }}>
 				<Stack spacing={4} as={Container} maxW={'3xl'} textAlign={'center'}>
-					<Heading fontSize={'3xl'}>This is the headline</Heading>
+					<Heading fontSize={'3xl'}>Trade with Flow</Heading>
 					<Text color={'gray.600'} fontSize={'xl'}>
-						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-						nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-						sed diam voluptua.
+						Get to know about Breakouts and Fakeouts before you enter into a position.
 					</Text>
 				</Stack>
-
-				<Container maxW={'6xl'} mt={10}>
-					<SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={10}>
-						{GridFeatures.map((feature) => (
-							<HStack key={feature.id} align={'top'}>
-								<Box color={'green.400'} px={2}>
-									<Icon as={CheckIcon} />
-								</Box>
-								<VStack align={'start'}>
-									<Text fontWeight={600}>{feature.title}</Text>
-									<Text color={'gray.600'}>{feature.text}</Text>
-								</VStack>
-							</HStack>
-						))}
-					</SimpleGrid>
-				</Container>
 			</Box>
 
 
@@ -293,23 +277,23 @@ export const LandingPage = () => {
 					<SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
 						<ThreeColumnFeature
 							icon={<Icon as={FcAssistant} w={10} h={10} />}
-							title={'Lifetime Support'}
+							title={'Know the Market'}
 							text={
-								'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...'
+								'Get to know about the market volatility with our Live Market panel beforehand starting your trade.'
 							}
 						/>
 						<ThreeColumnFeature
 							icon={<Icon as={FcDonate} w={10} h={10} />}
-							title={'Unlimited Donations'}
+							title={'Get your Indicators'}
 							text={
-								'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...'
+								'Fetch the value of indicators that will help you understand the forecasting process.'
 							}
 						/>
 						<ThreeColumnFeature
 							icon={<Icon as={FcInTransit} w={10} h={10} />}
-							title={'Instant Delivery'}
+							title={'Instant Prediction'}
 							text={
-								'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...'
+								'Get your predicted price according to timeseries forecasting with up to 95% accuracy'
 							}
 						/>
 					</SimpleGrid>
@@ -327,10 +311,9 @@ export const LandingPage = () => {
 						spacing={8}>
 						<Stack spacing={6}>
 							<Box>
-								<Logo color={useColorModeValue('gray.700', 'white')} />
 							</Box>
 							<Text fontSize={'sm'}>
-								© 2022 Chakra Templates. All rights reserved
+								© 2022 Team 5Jamz. All rights reserved
 							</Text>
 							<Stack direction={'row'} spacing={6}>
 								<SocialButton label={'Twitter'} href={'#'}>

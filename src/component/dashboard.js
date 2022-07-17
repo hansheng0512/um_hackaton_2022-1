@@ -135,7 +135,7 @@ class Dashboard extends React.Component {
                 studies: [
                   "StochasticRSI@tv-basicstudies",
                   "RSI@tv-basicstudies",
-                  "TripleEMA@tv-basicstudies"
+                  "MACD@tv-basicstudies"
                 ]
               }}
             />
