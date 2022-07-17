@@ -28,6 +28,7 @@ import {useHistory} from "react-router-dom";
 const LinkItems = [
 	{name: '90 Days Forecast', icon: FiHome, url: '/mainpage'},
 	{name: 'Indicator', icon: FiHome, url: '/indicator'},
+	{name: 'Live Market', icon: FiHome, url: '/trading'},
 	// {name: 'Trading', icon: FiHome, url: '/trading'}
 ];
 

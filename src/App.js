@@ -34,22 +34,7 @@ const Tradingview = () => {
 	)
 }
 
-const steps = [
-	{
-		id: '0',
-		message: 'Hello how are you ?',
-		end: true
-	}
-];
 
-function chatbot() {
-	return (
-		<div className="App">
-			<h1>Welcome to 5Jamz Chatbot</h1>
-			<ChatBot steps={steps}/>
-		</div>
-	);
-}
 
 function lex() {
 	return (
