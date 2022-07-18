@@ -1,17 +1,38 @@
 import {MainLayout} from "../../layout";
-import {Button, Form, Input} from "antd";
+import {Button, Divider, Form, Input} from "antd";
 import {useState} from "react";
 
 export const IndicatorPage = () => {
 
 	const [showResult, setShowResult] = useState(false);
 
+	const [form] = Form.useForm();
+
+	const onFinish = () => {
+
+		let random_boolean_value = Math.random() < 0.5;
+
+		if (random_boolean_value) {
+
+			form.setFieldsValue({
+				result: "UP",
+			})
+		} else {
+			form.setFieldsValue({
+				result: "DOWN",
+			})
+		}
+
+		setShowResult(true);
+	}
+
 	return (
 		<MainLayout>
 			<Form
+				form={form}
 				labelCol={{ span: 4 }}
 				wrapperCol={{ span: 18 }}
-				onFinish={() => setShowResult(true)}
+				onFinish={onFinish}
 				autoComplete="off"
 			>
 				<Form.Item
@@ -39,10 +60,14 @@ export const IndicatorPage = () => {
 				</Form.Item>
 
 				<div style={{ textAlign: 'center' }}>
-					<Button type="primary" htmlType="submit">
-						Submit
-					</Button>
+					<Form.Item>
+						<Button type="primary" htmlType="submit">
+							Predict
+						</Button>
+					</Form.Item>
 				</div>
+
+				<Divider />
 
 				{
 					showResult && (
@@ -51,7 +76,7 @@ export const IndicatorPage = () => {
 								label="Result"
 								name="result"
 							>
-								<Input type={"number"} disabled={true} />
+								<Input disabled={true} />
 							</Form.Item>
 						</>
 					)
