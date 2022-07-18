@@ -10,18 +10,15 @@ export const CandleStickChart = ({ data }) => {
 					type: 'candlestick',
 				},
 				title: {
-					text: 'CandleStick Chart - Category X-axis',
+					text: 'X-Axis = Days , Y-Axis = Price',
 					align: 'left'
 				},
 				tooltip: {
 					enabled: true,
 				},
 				xaxis: {
-					type: 'category',
-					labels: {
-						formatter: function (val) {
-							return moment(val).format('MMM DD HH:mm')
-						}
+					tooltip: {
+						enabled: true
 					}
 				},
 				yaxis: {
